@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+ <div class="text-center">
+    <h1 class="display-4"><b>Welcome!</b></b></h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+        <img src="https://picsum.photos/id/237/200/300" alt="No Image Found" />
+    
+        <img src="https://picsum.photos/200/300?grayscale" alt="No Image Found" />
+   
+        <img src="https://picsum.photos/200/300/?blur" alt="No Image Found" />
+  
+        <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="No Image Found" />
+    
+        <a href="https://www.linkedin.com/in/gaurijindal/"><img src="https://picsum.photos/seed/picsum/200/300" alt="Image Not Found" /></a><br><br>
+
+</div>
+<div>
+    <table border="2px solid black" >
+        <thead>End-Term Examination 2024</thead><br>
+            <tr>
+                <td>Course-Code</td>
+                <td>Date of Examination</td>
+            </tr>
+            <tr>
+                <td>INT-253</td>
+                <td>12 May 2024</td>
+            </tr>
+            <tr>
+                <td>INT-402</td>
+                <td>15 May 2024</td>
+            </tr>
+            <tr>
+                <td>CSE-445</td>
+                <td>20 May 2024</td>
+            </tr>
+            <tr>
+                <td>MGN-909</td>
+                <td>24 May 2024</td>
+            </tr>
+    </table>
+</div><br /><br />
+
+<img style="position:center" src="images\pexels-photo-919278.jpeg" />
+
+<div>
+    <video>
+        < src="https://media.istockphoto.com/id/1158743130/video/sunbeams-peaking-through-lush-green-leaves.mp4?s=mp4-640x640-is&k=20&c=uzwAw1bBWiODeEU062aLC54E1vkhFrXypSAgsi3dAiM=" type="video/mp4"/>
+    </video>
+</div>
+
+
+<h1>The current date of today is @DateTime.Now.Year</h1><br />
+<h1>Calculator</h1>
+@{
+    var a = 10;
+    var b = 12;
+    var c = a + b;
+    var p = a - b;
+    var q = a * b;
+    var r = a / b;
+}
+<h2>The addition of the given numbers is @c</h2>
+<h2>The subtraction of the given numbers is @p</h2>
+<h2>The product of the given numbers is @q</h2>
+<h2>The quotient of the given numbers is @r</h2><br /><br />
+
+@{
+    string name = "Gauri";
+}
+@for(int i = 1; i <= 10; i++)
+{
+    <h3>My name is @name</h3>
+}
+<br />
+@{
+    string month = "August";
+}
+@switch (month)
+{
+    case "January":
+        <p>We are running in January 2024</p>
+        break;
+    case "February":
+        <p>We are running in February 2024</p>
+        break;
+    case "March":
+        <p>We are running in March 2024</p>
+        break;
+    case "April":
+        <p>We are running in April 2024</p>
+        break;
+    case "May":
+        <p>We are running in May 2024</p>
+        break;
+    case "June":
+        <p>We are running in June 2024</p>
+        break;
+    case "July":
+        <p>We are running in July 2024</p>
+        break;
+    case "August":
+        <p>We are running in August 2024</p>
+        break;
+    case "September":
+        <p>We are running in September 2024</p>
+        break;
+    case "October":
+        <p>We are running in October 2024</p>
+        break;
+    case "November":
+        <p>We are running in November 2024</p>
+        break;
+    case "December":
+        <p>We are running in December 2024</p>
+        break;
+    default:
+        <p>Enter a valid Month.</p>
+        break;
+}
+<h3>My favourite month of the year is @month</h3> <br /><br />
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main, #tn img {
+            box-shadow: 2px 2px 2px red;
+            border-radius: 10px;
+        }
+
+        #tn img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #tn {
+            text-align: center;
+        }
+
+        #main {
+            width: 40%;
+            height: 300px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Image Thumbnail Gallery</h1>
+    <img src="~/images/1008-458x354.jpg" id="main"/>
+    <div id="tn">
+        <img src="~/images/1015-458x354.jpg" />
+        <img src="~/images/1018-458x354.jpg" />
+        <img src="~/images/1037-458x354.jpg" />
+        <img src="~/images/1039-458x354.jpg" />
+        <img src="~/images/1057-458x354.jpg" />
+        <img src="~/images/1063-458x354.jpg" />
+    </div>
+    <script>
+        var a = document.getElementById("tn");
+        var b = a.getElementsByTagName("img");
+        var c = document.getElementById("main");
+        for (let i = 0; i < b.length; i++) {
+            let d = b[i];
+            d.addEventListener("click", function () {
+                c.src = this.src;
+            }
+            )
+        }
+    </script>
+</body>
+</html>
+
+
